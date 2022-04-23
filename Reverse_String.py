@@ -1,3 +1,4 @@
 str1=input()
-str2=''.join(reversed(str1))
-print(str2)
+words=str1.split()
+words=list(reversed(words))
+print(" ".join(words))
