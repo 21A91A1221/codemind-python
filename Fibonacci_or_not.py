@@ -7,9 +7,9 @@ for i in range(1,n+1,1):
     n3=n1+n2
     n1=n2
     n2=n3
-    if (n3==n):
+    if(n3==n):
         j=j+1
-if j==0:
-    print('False')
+if(j==0):
+    print(False)
 else:
-    print('True')
+    print(True)
