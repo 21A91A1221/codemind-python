@@ -1,12 +1,12 @@
 n=int(input())
-temp=n
-c=0
+t=n
+l=0
 while(n>0):
+    l+=1
     n=n//10
-    c=c+1
-n=temp*temp
-n=n%(pow(10,c))
-if(temp==n):
-    print("Automorphic Number")
+n=t*t
+n=n%(pow(10,l))
+if(t==n):
+    print('Automorphic Number')
 else:
-    print("Not an Automorphic Number")
+    print('Not an Automorphic Number')
