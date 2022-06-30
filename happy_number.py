@@ -1,13 +1,23 @@
-n=int(input())
-s=0
-while(s!=1 and s!=4):
+def happy(n):
     s=0
-    while(n!=0):
-        r=n%10
-        s=s+(r*r)
-        n=n//10
-    n=s
-if(s==1):
+    while (1):
+        s=0
+        while n>0:
+            r=n%10
+            s+=r**2
+            n//=10
+        if s<10:
+            break
+        else:
+            n=s
+            continue
+    if s==1 or s==7:
+        return 1
+    else:
+        return 0
+n=int(input())
+res=happy(n)
+if res==1:
     print("True")
 else:
     print("False")
