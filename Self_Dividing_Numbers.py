@@ -1,20 +1,23 @@
-def sd(r):
-    a=b=0
-    t=r
-    while(r):
-        d=r%10
-        if d==0:
-            return 0
-        if t%d==0:
-            b+=1
-        a+=1
-        r=r//10
-    if a==b:
+def selfdiv(a):
+    temp=a
+    flag=0
+    while temp>0:
+        rem=temp%10
+        if rem==0:
+            flag=0
+            break
+        if a%rem==0:
+            flag=1
+            temp//=10
+        else:
+            flag=0
+            break
+    if flag==1:
         return 1
     else:
         return 0
-v=int(input())
-k=int(input())
-for r in range(v,k+1):
-    if(sd(r)):
-        print(r,end=' ')
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if selfdiv(i)==1:
+        print(i,end=" ")
