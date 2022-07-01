@@ -1,17 +1,20 @@
-n=int(input())
-l=0
-t=n
-while n:
-    l+=1
-    n=n//10
-n=t
-v=0
-while n:
-    r=n%10
-    v=v+pow(r,l)
-    n=n//10
-    l-=1
-if v==t:
-    print('True')
+def rev(a):
+    s=0
+    while a>0:
+        r=a%10
+        s=(s*10)+r
+        a//=10
+    return s
+a=int(input())
+arev=rev(a)
+su=0
+j=1
+while arev>0:
+    r=arev%10
+    su+=r**j
+    j+=1
+    arev//=10
+if su==a:
+    print("True")
 else:
-    print('False')
+    print("False")
