@@ -1,11 +1,12 @@
-n=int(input())
-sum=0
-temp=n
-while(n>0):
-    r=n%10
-    sum=(sum*10)+r
-    n=n//10
-if(temp==sum):
+def rev(a):
+    r=0
+    while (a>0):
+        rem=a%10
+        r=(r*10)+rem
+        a//=10
+    return r
+a=int(input())
+if (a==rev(a)):
     print("True")
 else:
     print("False")
