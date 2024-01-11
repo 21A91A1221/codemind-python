@@ -1,15 +1,10 @@
-a=int(input())
-b=c=d=r=rev=0
-while a>0:
-    b=a%10
-    a//=10
-    r=r*10+b
-while r>0:
-    c=r%10
-    r//=10
-    if d<1:
-        if c==6:
-            c=9
-            d=1
-    rev=rev*10+c
-print(rev)
+def max_69(num):
+    s = str(num)
+    index_of_six = s.find('6')
+    if index_of_six != -1:
+        s=s[:index_of_six]+'9'+s[index_of_six+1:]
+    r=int(s)
+    return r
+num=int(input())
+r=max_69(num)
+print(r)
